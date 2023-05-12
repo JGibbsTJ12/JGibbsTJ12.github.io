@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Ubuntu";
 }
 .container{
     height: 100vh;
@@ -18,49 +19,77 @@
 .slide1 {
     background-image: url(../images/background.png);
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-}
-.slide1 p{
-    font-size: 32pt;
 }
 .slide2 {
     background-image: url(../images/background2.png);
     background-size: cover;
 }
+.homebox{
+    background-color: rgba(164, 171, 199, 0.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    gap: 25px;
+    animation-name: slideFadeIn;
+    animation-duration: 1.4s;
+}
+.homebox h1{
+    color: #2D333C;
+}
 .slide1 button{
-    background:#4A6071;
-    color:#BCC6E0;
-    border:none;
-    position:relative;
-    height:60px;
-    font-size:1.6em;
-    padding:0 2em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
+    background: #4A6071;
+    color: #BCC6E0;
+    border: none;
+    position: relative;
+    height: 60px;
+    width: 12em;
+    font-size: 1.4em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
 }
 .slide1 button:hover{
-    background:#BCC6E0;
-    color:#4A6071;
+    background: #BCC6E0;
+    color: #4A6071;
 }
 .slide1 button:before,button:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
     background: #4A6071;
     transition:400ms ease all;
 }
 .slide1 button:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
 }
 .slide1 button:hover:before,button:hover:after{
-    width:100%;
-    transition:800ms ease all;
+    width: 100%;
+    transition: 800ms ease all;
+}
+@keyframes slideFadeIn {
+    0%  {
+        opacity: 0%;
+        transform: translateY(10em);
+    }
+    100%    {
+        opacity: 100%;
+        transform: translateY(0em);
+    }
+}
+.nav_bar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 6em;
 }
