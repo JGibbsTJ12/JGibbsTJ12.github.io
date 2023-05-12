@@ -1,11 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: "Ubuntu";
+    font-family: "Ubuntu";  
+    text-decoration: none;
 }
-.container{
+.container {
     height: 100vh;
     width: 100%;
+    display: unset;
 }
 .slide {
     background-color: #423542;
@@ -24,7 +26,7 @@
     background-image: url(../images/background2.png);
     background-size: cover;
 }
-.homebox{
+.homebox {
     background-color: rgba(164, 171, 199, 0.6);
     border-radius: 10px;
     display: flex;
@@ -35,10 +37,10 @@
     animation-name: slideFadeIn;
     animation-duration: 1.4s;
 }
-.homebox h1{
+.homebox h1 {
     color: #2D333C;
 }
-.slide1 button{
+.slide1 button {
     background: #4A6071;
     color: #BCC6E0;
     border: none;
@@ -51,11 +53,11 @@
     transition: 800ms ease all;
     outline: none;
 }
-.slide1 button:hover{
+.slide1 button:hover {
     background: #BCC6E0;
     color: #4A6071;
 }
-.slide1 button:before,button:after{
+.slide1 button:before,button:after {
     content: '';
     position: absolute;
     top: 0;
@@ -65,13 +67,13 @@
     background: #4A6071;
     transition:400ms ease all;
 }
-.slide1 button:after{
+.slide1 button:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
-.slide1 button:hover:before,button:hover:after{
+.slide1 button:hover:before,button:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
@@ -85,11 +87,48 @@
         transform: translateY(0em);
     }
 }
-.nav_bar{
-    position: sticky;
+.navbar {
     top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    height: 3.5em;
+    width: 100%;
+    background-color: #648093;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+}
+.navbar_nav {
+    list-style: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    height: 6em;
+    width: 100%;
+}
+.nav_item {
+    margin-top: 1em;
+    margin-right: 3em;
+}
+.nav_item a{
+    color:#4A6071;
+    font-size: 1.25em;
+}
+.nav_item a:hover {
+    color:aliceblue;  
+    display: inline-block;
+    position: relative;
+}
+.nav_item a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #2D333C;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+.nav_item a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
