@@ -18,13 +18,13 @@
             </section>
             <nav class="navbar">
                 <ul class="navbar_nav">
-                    <li id="nav_resume" class="nav_item resume"><a href="resources/JordonGibbsResume.pdf" download>Resume</a></li>
-                    <li id="nav_linkedin" class="nav_item linkedin"><a href="https://www.linkedin.com/in/jordon-gibbs-b18553201/">LinkedIn</a></li>
+                    <li id="nav_resume" class="nav_item resume"><a href="resources/JordonGibbsResume.pdf" download target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    <li id="nav_linkedin" class="nav_item linkedin"><a href="https://www.linkedin.com/in/jordon-gibbs-b18553201/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     <li id="nav_home" class="nav_item"><a href="#home">Home</a></li>
                     <li id="nav_about" class="nav_item"><a href="#about">About</a></li>
                     <li id="nav_projects" class="nav_item"><a href="#projects">Projects</a></li>
                     <li id="nav_contact" class="nav_item"><a href="#contact">Contact</a></li>
-                    <li id="nav_blog" class="nav_item"><a href="blog.html">Blog</a></li> 
+                    <li id="nav_blog" class="nav_item" target="_blank" rel="noopener noreferrer"><a href="blog.html">Blog</a></li> 
                 </ul>
             </nav>
             <section id="about" class="slide slide2">
@@ -97,16 +97,35 @@
                         Every meal, plan and ingredient is saved in a database. With minimal
                         user input a meal plan for the entire week is created and a shopping list
                         with measurements and amounts is created alongside.
-                        <br/>
-                        <img src="images/javaskill.png" class="project_arch">
-                        <img src="images/hibernateskill.png" class="project_arch">
-                        <img src="images/sqlskill.png" class="project_arch">
-                        <a href="https://github.com/JGibbsTJ12/JelloMenu">GitHub</a>
+                        <a href="https://github.com/JGibbsTJ12/JelloMenu" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </p>
                 </div>
+                <div class="project_arch">
+                    <img src="images/javaskill.png">
+                    <img src="images/hibernateskill.png">
+                    <img src="images/sqlskill.png">
+                </div>
             </section>
-            <section id="contact" class="slide">
+            <section id="contact" class="slide slide4">
+                <h1>Contact</h1>
+                <div class="phone">
+                    <img src="images/phone.png">830-358-6528
+                </div>
+                <div class="contacts">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="cd8c7a99-a3e7-421f-a53d-fad0fd06ba34">
+                        
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" required>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" required>
+                        <label for="message">Message: </label>
+                        <textarea name="message" required></textarea>
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
+                        <button type="submit">Submit Form</button>
+                    </form>
+                </div>
             </section>
         </div>
     </body>
